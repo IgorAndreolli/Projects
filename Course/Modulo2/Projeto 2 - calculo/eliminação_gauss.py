@@ -5,14 +5,37 @@ import pandas as pd
 
 # Exemplo de matriz aumentada para o sistema Ax = b
 # Aqui, as três primeiras colunas são os coeficientes de A e a última coluna é o vetor b
+
+# -------- Matriz 3x3 -------- Descomente para testar
+# matriz = np.array([
+#     [4, 1, 1],
+#     [1, 3, 1],
+#     [1, 1, 2]
+# ], dtype=float)
+
+# matriz_resultado = np.zeros_like(matriz, dtype=float)
+# b = np.array([1, 0, -1], dtype=float)
+# ---------------------------------
+
+# ----------- Matriz 12 x 12 ----------- Descomente para testar
 matriz = np.array([
-    [4, 1, 1],
-    [1, 3, 1],
-    [1, 1, 2]
+    [31, 2, 4, 4, 3, 4, 2, 1, 2, 2, 2, 3],
+    [2, 36, 2, 2, 4, 3, 2, 3, 3, 5, 3, 4],
+    [4, 2, 32, 1, 4, 4, 2, 2, 4, 3, 2, 2],
+    [4, 2, 1, 34, 3, 3, 3, 4, 3, 2, 3, 2],
+    [3, 4, 4, 3, 38, 3, 1, 3, 3, 4, 2, 3],
+    [4, 3, 4, 3, 3, 40, 1, 2, 4, 4, 2, 4],
+    [2, 2, 2, 3, 1, 1, 29, 3, 3, 1, 3, 2],
+    [1, 3, 2, 4, 3, 2, 3, 35, 2, 5, 5, 3],
+    [2, 3, 4, 3, 3, 4, 3, 2, 34, 2, 1, 2],
+    [2, 5, 3, 2, 4, 4, 1, 5, 2, 38, 1, 3],
+    [2, 3, 2, 3, 2, 2, 3, 5, 1, 1, 31, 2],
+    [3, 4, 2, 2, 3, 4, 2, 3, 2, 3, 2, 32]
 ], dtype=float)
 
-matriz_resultado = np.zeros((3,3), dtype=float)
-b = np.array([1, 0, -1], dtype=float)
+matriz_resultado = np.zeros_like(matriz, dtype=float)
+b = np.array([220, 322, 294, 337, 399, 458, 356, 516, 469, 565, 493, 556], dtype=float)
+
 
 #verificando o resultado 
 x_ = np.linalg.solve(matriz, b)
